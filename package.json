@@ -1,21 +1,14 @@
 {
-  "name": "bt_facebook-api-_page-api",
+  "name": "facebook-auto-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "He thong xu ly Facebook comment tu dong voi Kafka, AI, Retry va Dead Letter Queue",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "axios": "^1.15.0",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "dev:webhook":  "cd services/webhook-service  && npm install && npm run dev",
+    "dev:core":     "cd services/core-service      && npm install && npm run dev",
+    "dev:backend":  "cd services/backend-api       && npm install && npm run dev",
+    "dev:retry":    "cd services/retry-service     && npm install && npm run dev",
+    "install:all":  "cd services/webhook-service && npm i && cd ../core-service && npm i && cd ../backend-api && npm i && cd ../retry-service && npm i",
+    "docker:up":    "docker compose up -d",
+    "docker:down":  "docker compose down"
   }
 }

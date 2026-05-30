@@ -1,0 +1,18 @@
+{
+  "name": "webhook-service",
+  "version": "1.0.0",
+  "description": "Port 3001 - Nhan webhook Facebook, xac thuc HMAC-SHA256 va publish vao Kafka raw_events.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
